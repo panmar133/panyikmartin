@@ -28,3 +28,7 @@ Route::get('/bejelentkezes', function () {
 Route::get('/felhasznalo', function () {
     return view('user');
 });
+
+Route::get('/urlap', function () {
+    return view('urlap');
+});
