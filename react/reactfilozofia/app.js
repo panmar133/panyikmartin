@@ -14,7 +14,9 @@ const gomb = React.createElement("button",
         onclick: function()
         {
             alert("React gomb megnyomva!");
-        }
+        },
     },
     "React Gomb"
 )
+
+ReactDOM.render(gomb.document.getElementById("react-button-container"));
