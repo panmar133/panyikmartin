@@ -11,7 +11,7 @@ document.getElementById("nativ-button-container").appendChild(btn);
 
 const gomb = React.createElement("button", 
     {
-        onclick: function()
+        onClick: function()
         {
             alert("React gomb megnyomva!");
         },
@@ -19,4 +19,4 @@ const gomb = React.createElement("button",
     "React Gomb"
 )
 
-ReactDOM.render(gomb.document.getElementById("react-button-container"));
+ReactDOM.render(gomb, document.getElementById("react-button-container"));
