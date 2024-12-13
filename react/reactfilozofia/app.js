@@ -4,6 +4,8 @@ btn.onclick = function () {
     alert("Natív gomb megnyomva!")
 }
 btn.innerHTML = "Natív gomb";
+
+//hozzáfűzi lényegében a divhez a gombot.
 document.getElementById("nativ-button-container").appendChild(btn);
 
 
@@ -18,5 +20,6 @@ const gomb = React.createElement("button",
     },
     "React Gomb"
 )
-
+//első paraméter az elemet ami használni szeretnénk
+//második paraméter egy referencia egy nativ DOM elemre, hivatkozásipont megadása
 ReactDOM.render(gomb, document.getElementById("react-button-container"));
