@@ -1,0 +1,10 @@
+SELECT * from eu_zonak;
+
+SELECT eu_zonak.zonanev, eu_adatok.datum, eu_adatok.szazalekpont FROM eu_zonak 
+INNER JOIN eu_zonadatok ON eu_zonak.id = eu_zonadatok.zonakID
+INNER JOIN eu_adatok ON eu_zonadatok.adatokID = eu_adatok.id
+WHERE eu_zonak.zonanev LIKE "Észak-Európa";
+
+
+
+SELECT magyar_havi_adatok.datum, magyar_havi_adatok.import, magyar_havi_adatok.export, ROUND(magyar_havi_adatok.export - magyar_havi_adatok.import, 2) FROM magyar_havi_adatok;
