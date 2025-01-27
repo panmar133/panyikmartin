@@ -18,9 +18,9 @@ app.get("/", (req, res) => {
     res.send("Backend mükszik.");
 });
 
-app.get("/regiok:id", (req, res) => {
-    const sql = "SELECT * FROM regiok WHERE regiok.Rid = ?;";
-    db.query(sql, id, (err, result) => {
+app.get("/regiok", (req, res) => {
+    const sql = "SELECT * FROM regiok";
+    db.query(sql, (err, result) => {
         if (err) return res.json(err);
         return res.json(result);
     });
@@ -29,6 +29,17 @@ app.get("/regiok:id", (req, res) => {
 app.get("/regiokwhere", (req, res) => {
     const sql = "SELECT * FROM regiok WHERE regiok.Rid = 8;";
     db.query(sql, (err, result) => {
+        if (err) {
+            return res.json(err);
+        }
+        return res.json(result);
+    });
+});
+
+app.post("/ujregio", (req, res) => {
+    const sql = "INSERT INTO `regiok` (`Rid`, `regionev`, `regio_tipusa`) VALUES (?, ?, ?)";
+    const values = ["11", "Csudapest", "Csudamegye"];
+    db.query(sql, values, (err, result) => {
         if (err) {
             return res.json(err);
         }
