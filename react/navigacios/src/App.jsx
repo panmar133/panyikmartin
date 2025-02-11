@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
+import { Navbar } from './components/Navbar'
 import {Home, About, Contact, Services} from './components/pages'
 
 
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
       <div className='App'>
+        <Navbar/>
         <Routes>
           <Route path='/' element={ <Home /> } />
           <Route path='/about' element={ <About /> } />
