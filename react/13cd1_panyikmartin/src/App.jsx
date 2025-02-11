@@ -1,14 +1,20 @@
-import { useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.css';
+
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './oldalak/Home';
+import Regiok from './oldalak/Regiok';
 
 function App() {
 
-
   return (
     <>
-      <h1 className='container'>TZ</h1>
       <div>
-        <p>Ez a főoldal.</p>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={ <Home />}/>
+        <Route path='/regiok' element={ <Regiok />}/>
+      </Routes>
+      </BrowserRouter>
       </div>
     </>
   )
