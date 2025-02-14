@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link,Navlink } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 import "./Navbar.css"
  
 export const Navbar = () =>
@@ -18,13 +18,13 @@ export const Navbar = () =>
         </div>
         <ul className={menuOpen ? "open" : ""}>
             <li>
-                <Navlink to = "/About">Rólunk</Navlink>
+                <NavLink to = "/About">Rólunk</NavLink>
             </li>
             <li>
-                <Navlink to = "/Services">Szolgáltatások</Navlink>
+                <NavLink to = "/Services">Szolgáltatások</NavLink>
             </li>
             <li>
-                <Navlink to = "/Contact">Kapcsolat</Navlink>
+                <NavLink to = "/Contact">Kapcsolat</NavLink>
             </li>
  
         </ul>
